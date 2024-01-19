@@ -60,7 +60,7 @@ class MyBot(BaseBot):
     async def on_start(self, session_metadata: SessionMetadata) -> None:
       print("hi im alive?")
       try:
-        await self.highrise.walk_to( Position(x=5.2, y=0, z=1.7, facing='FrontRight'))
+        await self.highrise.walk_to( Position(x=11.6, y=1, z=29.6, facing='FrontRight'))
       except Exception as e:
         print(f"An exception occurred: {e}")
 
@@ -151,7 +151,7 @@ class MyBot(BaseBot):
 keep_alive()
 if __name__ == "__main__":
     room_id = "6568b3b3976fac32224a4d24"
-    token = "e76b033708fb73e0ed67d6c3265951c22706dd95c09988c55d67f877deffa28c" 
+    token = "d2a8d6526d0181a0aa711cf47344c2bc28c0476b479ee7916030641080119d43" 
     bot = Highrise() 
     bot_instance = MyBot(bot, room_id, token)
     asyncio.run(bot_instance.run())
